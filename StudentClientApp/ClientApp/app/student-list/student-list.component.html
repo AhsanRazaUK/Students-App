@@ -1,0 +1,31 @@
+<h2>{{title}}</h2>
+<div class="gap-20"></div>
+<div class="col-md-4" style="padding-left: 0;">
+    <input [(ngModel)]="searchText" class="form-control" placeholder="Search...">
+</div>
+<div class="gap-20"></div>
+<table class="table table-condensed table-bordered table-responsive table-hover" matSort (matSortChange)="sortData($event)">
+    <thead>
+        <tr>
+            <th mat-sort-header="studentID">Student ID</th>
+            <th mat-sort-header="firstName">First Name</th>
+            <th mat-sort-header="surname">Surname</th>
+            <th><a routerLink="/add-new-student">Add New</a></th>
+        </tr>
+    </thead>
+    <tbody *ngIf="studentList?.length > 0;">
+        <tr *ngFor="let student of studentList | filter : searchText">
+            <td>{{student.studentID}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.surname}}</td>
+            <td>
+                <a class="btn btn-info" routerLink="/edit-student/{{student.studentID}}"><i class="fa fa-edit"></i>&nbsp;Edit&nbsp;</a>&nbsp;
+                <a class="btn btn-danger" routerLink="/delete-student/{{student.studentID}}"><i class="fa fa-trash"></i>&nbsp;Delete</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="studentList?.length <= 0;">
+    <mat-spinner></mat-spinner>
+</div>

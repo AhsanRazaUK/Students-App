@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\css\css\**" />
+    <Compile Remove="wwwroot\css\fonts\**" />
+    <Content Remove="wwwroot\css\css\**" />
+    <Content Remove="wwwroot\css\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\css\css\**" />
+    <EmbeddedResource Remove="wwwroot\css\fonts\**" />
+    <None Remove="wwwroot\css\css\**" />
+    <None Remove="wwwroot\css\fonts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\font-awesome\css\font-awesome.css.map" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.woff2" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="ng build" />
+  </Target>
+
+</Project>
