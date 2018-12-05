@@ -1,37 +1,37 @@
 [
   {
-    "studentID": 1,
-    "firstName": "Martin",
-    "surname": "Wood"
+    "StudentID": 1,
+    "FirstName": "Tim",
+    "Surname": "Wood"
   },
   {
-    "studentID": 2,
-    "firstName": "Steven",
-    "surname": "Wood"
+    "StudentID": 2,
+    "FirstName": "Steven",
+    "Surname": "Wood"
   },
   {
-    "studentID": 3,
-    "firstName": "Asad",
-    "surname": "Wood"
+    "StudentID": 3,
+    "FirstName": "Asad",
+    "Surname": "Wood"
   },
   {
-    "studentID": 4,
-    "firstName": "Moosa",
-    "surname": "Wood"
+    "StudentID": 4,
+    "FirstName": "Fredy",
+    "Surname": "Wood"
   },
   {
-    "studentID": 5,
-    "firstName": "Sherry",
-    "surname": "Shamsi"
+    "StudentID": 5,
+    "FirstName": "Sherry",
+    "Surname": "Shamsi"
   },
   {
-    "studentID": 6,
-    "firstName": "Manoo",
-    "surname": "Wood"
+    "StudentID": 6,
+    "FirstName": "Manoo",
+    "Surname": "Wood"
   },
   {
-    "studentID": 8,
-    "firstName": "James",
-    "surname": "Cameron"
+    "StudentID": 8,
+    "FirstName": "James",
+    "Surname": "Cameron"
   }
 ]

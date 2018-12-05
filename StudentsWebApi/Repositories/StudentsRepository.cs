@@ -1,9 +1,8 @@
-﻿using System;
+﻿using StudentsWebApi.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace StudentsWebApi.Models
+namespace StudentsWebApi.Repositories
 {
     public class StudentsRepository : IStudentsRepository<Student, long>
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StudentsWebApi.Models
+namespace StudentsWebApi.Repositories
 {
     public interface IStudentsRepository<TEntity, U> where TEntity : class
     {

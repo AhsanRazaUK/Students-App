@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using StudentsWebApi.Models;
+using StudentsWebApi.Repositories;
 
 namespace StudentsWebApi
 {
@@ -33,7 +34,8 @@ namespace StudentsWebApi
               options.UseSqlServer(
                   Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IStudentsRepository<Student, long>, StudentsRepository>();
+            //services.AddTransient<IStudentsRepository<Student, long>, StudentsRepository>();
+            services.AddTransient<IStudentsRepository<Student, long>, MockStudentsRepository>();
 
             services.AddCors(o => o.AddPolicy("StudentsWebApiCorsPolicy", builder =>
             {
