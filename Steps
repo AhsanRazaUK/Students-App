@@ -1,0 +1,35 @@
+ng new <app-name> --skip-git --skip-tests
+
+- Create ClientApp folder in Project Root Folder
+- Copy tsconfig.json & angular.json to Project Root Folder
+
+- Copy src folder of app to ClientApp
+
+- Edit tsconfig.json file
+	"exclude": ["./node_modules/"]
+	"outDir": "./wwwroot/clientapp/out-tsc",
+  
+- Edit angular.json
+	"root": "ClientApp",
+	"sourceRoot": "ClientApp",
+	"outputPath": "wwwroot/clientapp/dist",
+
+	replace golabl src with ClientApp
+	
+- npm install
+- add link to html 
+	- runtime.js
+	- polyfill.js
+	- styles.js
+	- vendor.js
+	- main.js
+- app component tag in target htmlfile
+- service add following imports
+import { HttpClient } from '@angular/common/http';
+
+import 'rxjs/Rx';
+
+import { Observable } from 'rxjs';
+
+- ng build --watch
+
